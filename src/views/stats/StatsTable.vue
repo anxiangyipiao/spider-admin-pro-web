@@ -132,6 +132,7 @@
       <el-table-column
         label="运行次数"
         align="center"
+        width="60"
       >
         <template slot-scope="scope">
 
