@@ -7,7 +7,7 @@
       <el-table-column
         align="center"
         label="序号"
-        width="60"
+       
       >
         <template slot-scope="scope">
           {{ scope.$index + 1}}
@@ -17,7 +17,7 @@
       <el-table-column
         label="项目名"
         align="center"
-        width="150px"
+  
       >
         <template slot-scope="scope">
           {{scope.row.site_name || '-'}}
@@ -25,9 +25,18 @@
       </el-table-column>
 
       <el-table-column
+        label="来源"
+        align="center"
+      >
+        <template slot-scope="scope">
+          {{scope.row.source || '-'}}
+        </template>
+      </el-table-column>
+
+      <el-table-column
         label="Spider"
         align="center"
-        width="100px"
+      
       >
         <template slot-scope="scope">
 
@@ -39,7 +48,7 @@
       <el-table-column
         label="本次所有数量"
         align="center"
-        width="60px"
+      
       >
         <template slot-scope="scope">
           {{scope.row.this_time_all_request}}
@@ -49,7 +58,7 @@
       <el-table-column
         label="本次成功数量"
         align="center"
-        width="60px"
+   
       >
         <template slot-scope="scope">
           {{scope.row.this_time_success_request}}
@@ -59,7 +68,7 @@
       <el-table-column
         label="本次失败数量"
         align="center"
-        width="60px"
+      
       >
         <template slot-scope="scope">
           {{scope.row.this_time_fail_request}}
@@ -70,7 +79,7 @@
       <el-table-column
         label="今日所有数量"
         align="center"
-        width="60px"
+      
       >
         <template slot-scope="scope">
           {{scope.row.today_all_request}}
@@ -80,7 +89,7 @@
       <el-table-column
         label="今日成功数量"
         align="center"
-        width="60px"
+  
       >
         <template slot-scope="scope">
           {{scope.row.today_success_request}}
@@ -90,7 +99,7 @@
       <el-table-column
         label="今日失败数量"
         align="center"
-        width="80px"
+     
       >
         <template slot-scope="scope">
           {{scope.row.today_fail_request}}
@@ -100,7 +109,6 @@
       <el-table-column
         label="持续时间(s)"
         align="center"
-        width="60px"
         prop="duration"
         sortable="custom"
       >
@@ -112,7 +120,7 @@
       <el-table-column
         label="最后运行时间"
         align="center"
-        width="100px"
+
       >
         <template slot-scope="scope">
 
@@ -124,7 +132,6 @@
       <el-table-column
         label="运行次数"
         align="center"
-        width="60px"
       >
         <template slot-scope="scope">
 
@@ -133,8 +140,6 @@
         </template>
       </el-table-column>
 
-     
-    
     </mo-table>
   </div>
 </template>
