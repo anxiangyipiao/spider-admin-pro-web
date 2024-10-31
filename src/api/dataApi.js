@@ -51,7 +51,7 @@ module.exports = {
   systemSystemConfig: '/system/systemConfig',
 
   // 状态收集
-  statsCollectionListItem: 'statsCollection/listItem',
+  statsCollectionListItem: 'statsCollection/getTaskLog',
   statsCollectionDelete: 'statsCollection/delete',
 
   // 系统管理
