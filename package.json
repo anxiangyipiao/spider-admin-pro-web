@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "set NODE_OPTIONS=–openssl-legacy-provider && vue-cli-service serve",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build:prod": "vue-cli-service build",
     "dep-pro": "npm run build:prod && npm run dep-pub",
     "dep-pub": "bash publish.sh",

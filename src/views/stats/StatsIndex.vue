@@ -70,19 +70,17 @@ export default {
         page: this.page,
         size: this.size,
 
-        // scrapydServerId: this.scrapydServerId,
-        // project: this.project,
-        // spider: this.spider,
+        scrapydServerId: this.scrapydServerId,
+        project: this.project,
+        spider: this.spider,
 
-        // order_prop: this.orderProp,
-        // order_type: this.orderType,
+        order_prop: this.orderProp,
+        order_type: this.orderType,
       });
 
       if (res.code == 0) {
         this.list = res.data.list;
-        console.log(this.list);
         this.total = res.data.total;
-        console.log(this.total);
       }
 
       this.listLoading = false;

@@ -20,112 +20,121 @@
         width="150px"
       >
         <template slot-scope="scope">
-          {{scope.row.project || '-'}}
+          {{scope.row.site_name || '-'}}
         </template>
       </el-table-column>
 
       <el-table-column
         label="Spider"
         align="center"
+        width="100px"
       >
         <template slot-scope="scope">
 
-          {{scope.row.spider}}
+          {{scope.row.name}}
 
         </template>
       </el-table-column>
 
       <el-table-column
-        label="收集数量"
+        label="本次所有数量"
+        align="center"
+        width="60px"
+      >
+        <template slot-scope="scope">
+          {{scope.row.this_time_all_request}}
+        </template>
+      </el-table-column>
+
+      <el-table-column
+        label="本次成功数量"
+        align="center"
+        width="60px"
+      >
+        <template slot-scope="scope">
+          {{scope.row.this_time_success_request}}
+        </template>
+      </el-table-column>
+
+      <el-table-column
+        label="本次失败数量"
+        align="center"
+        width="60px"
+      >
+        <template slot-scope="scope">
+          {{scope.row.this_time_fail_request}}
+        </template>
+      </el-table-column>
+
+
+      <el-table-column
+        label="今日所有数量"
+        align="center"
+        width="60px"
+      >
+        <template slot-scope="scope">
+          {{scope.row.today_all_request}}
+        </template>
+      </el-table-column>
+
+      <el-table-column
+        label="今日成功数量"
+        align="center"
+        width="60px"
+      >
+        <template slot-scope="scope">
+          {{scope.row.today_success_request}}
+        </template>
+      </el-table-column>
+
+      <el-table-column
+        label="今日失败数量"
         align="center"
         width="80px"
       >
         <template slot-scope="scope">
-          <mo-text :text="scope.row.item_scraped_count + ''"></mo-text>
+          {{scope.row.today_fail_request}}
         </template>
       </el-table-column>
 
       <el-table-column
-        label="丢弃数量"
+        label="持续时间(s)"
         align="center"
-        width="80px"
-      >
-        <template slot-scope="scope">
-          <mo-text :text="scope.row.item_dropped_count + ''"></mo-text>
-        </template>
-      </el-table-column>
-
-      <el-table-column
-        label="错误日志"
-        align="center"
-        width="110px"
-        prop="log_error_count"
-        sortable="custom"
-      >
-        <template slot-scope="scope">
-          <mo-text :text="scope.row.log_error_count + ''"></mo-text>
-        </template>
-      </el-table-column>
-
-      <el-table-column
-        label="持续时间"
-        align="right"
-        width="110px"
+        width="60px"
         prop="duration"
         sortable="custom"
       >
         <template slot-scope="scope">
-          <mo-text :text="scope.row.duration_str"></mo-text>
+          <mo-text :text="scope.row.run_time"></mo-text>
         </template>
       </el-table-column>
 
       <el-table-column
-        label="开始时间"
+        label="最后运行时间"
         align="center"
-        width="170px"
+        width="100px"
       >
         <template slot-scope="scope">
 
-          {{scope.row.start_time}}
+          {{scope.row.last_time}}
 
         </template>
       </el-table-column>
 
       <el-table-column
-        label="结束时间"
+        label="运行次数"
         align="center"
-        width="170px"
+        width="60px"
       >
         <template slot-scope="scope">
 
-          {{scope.row.finish_time}}
+          {{scope.row.crawl_count}}
 
         </template>
       </el-table-column>
 
-      <!-- <el-table-column
-        label="结束原因"
-        align="center"
-      >
-        <template slot-scope="scope">
-          <mo-text :text="scope.row.finish_reason"></mo-text>
-        </template>
-      </el-table-column> -->
-
-      <el-table-column
-        label="运行日志"
-        align="center"
-        width="80px"
-      >
-        <template slot-scope="scope">
-
-          <router-link
-            :to="{'name': 'logs-project-spider-job', params: {project: scope.row.project, spider: scope.row.spider, job :scope.row.spider_job_id}}"
-            target="_blank"
-          ><i class="el-icon-document"></i> 日志</router-link>
-
-        </template>
-      </el-table-column>
+     
+    
     </mo-table>
   </div>
 </template>
