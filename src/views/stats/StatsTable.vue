@@ -68,10 +68,9 @@
       <el-table-column
         label="本次失败数量"
         align="center"
-      
       >
         <template slot-scope="scope">
-          {{scope.row.this_time_fail_request}}
+          <span style="color: red;">{{ scope.row.this_time_fail_request }}</span>
         </template>
       </el-table-column>
 
@@ -99,10 +98,9 @@
       <el-table-column
         label="今日失败数量"
         align="center"
-     
       >
         <template slot-scope="scope">
-          {{scope.row.today_fail_request}}
+          <span style="color: red;"> {{scope.row.today_fail_request}}</span>
         </template>
       </el-table-column>
 
